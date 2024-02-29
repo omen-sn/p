@@ -1,0 +1,44 @@
+{% load static %}
+{% load stockcontrol_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StorageHouse</title>
+<link type="text/css" rel="stylesheet" href="{% static 'stockcontrol/css/styles.css' %}">
+</head>
+<body>
+
+<nav>
+  <ul class="menu-list">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    {% for item in menu %}
+      <li><a href="{% url item.url_name %}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+
+<div class="category-bar">
+  <ul class="category-list">
+    {% if cat_selected == 0%}
+    <li class="active-category"><a href="{% url 'home' %}">ALL</a></li>
+    {% else %}
+    <li><a href="{% url 'home' %}">ALL</a></li>
+    {% endif %}
+
+    {% show_categories cat_selected %}
+  </ul>
+</div>
+
+{% block content %} {% endblock %}
+
+<div class="footer">
+  <p>Footer Content © 2024</p>
+</div>
+
+</body>
+</html>

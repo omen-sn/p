@@ -1,0 +1,279 @@
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+  }
+  .header {
+    padding: 1px;
+    text-align: center;
+    background: #333;
+    color: white;
+  }
+  .menu-list {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-list li {
+    float: left;
+  }
+  .menu-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .menu-list li a:hover {
+    background-color: #111;
+  }
+  .main {
+    padding: 16px;
+    padding-bottom: 100px;
+    flex: 1; /* Will take up the remaining space */
+    overflow: auto; /* Adds scroll to this section only if needed */
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .product {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 8px;
+    transition: transform 0.2s; /* Smooth transition for scaling on hover */
+  }
+  .product:hover {
+    transform: scale(1.05); /* Scales the product box on hover */
+  }
+  .creative-section {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Gradient background */
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .creative-section h2 {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+  }
+  .creative-section p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+  }
+  .about-section {
+    padding: 16px;
+    padding-bottom: 100px; /* Додатковий відступ знизу для футера */
+    background-color: #1c1c1c; /* Темний фон для секції "Про нас" */
+    border: 1px solid #333;
+    margin: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Тінь для ефекту "підняття" */
+  }
+  .about-section h2 {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+  }
+  .about-section p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+  }
+
+  .category-bar {
+  background-color: #f8f8f8; /* Сірий фон для візуального розділення */
+  padding: 10px 0; /* Додатковий простір зверху і знизу */
+  border-bottom: 1px solid #eaeaea; /* Тонка лінія для розділення з основним вмістом */
+}
+
+.category-list {
+  list-style: none; /* Видалення стандартних маркерів списку */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Центрування списку */
+}
+
+.category-list li {
+  display: inline; /* Відображення елементів списку в один рядок */
+  margin-right: 20px; /* Відступ між елементами */
+}
+
+.category-list li a {
+  text-decoration: none; /* Видалення підкреслення посилань */
+  color: #333; /* Колір тексту посилань */
+  font-weight: bold; /* Жирний текст для кращої видимості */
+}
+
+.active-category {
+  background-color: #d9d9d9; /* Світлий сірий */
+  color: #333; /* Темний сірий */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Припускаємо, що ваш фон білий */
+}
+
+.product-image {
+    /* Додайте стилі для зображення, коли воно буде доступне */
+}
+
+.product-info {
+    width: 100%;
+    max-width: 800px; /* Або будь-яка максимальна ширина, яка вам підходить */
+    border-top: 1px solid #ccc; /* Для візуального розділення */
+    padding-top: 20px;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product-status {
+    font-weight: bold;
+    color: #4CAF50; /* Зелений для 'In Stock', може бути змінений */
+}
+
+.product-supplier {
+    color: #666;
+}
+
+.product-actions {
+    /* Стилі для кнопок дій, якщо потрібно */
+}
+
+.product-description p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.additional-info {
+    margin-top: 20px;
+    /* Стилі для додаткової інформації */
+}
+
+.product h2 a, .product h2 a:visited {
+    color: #e0e0e0; /* Ваш стандартний колір тексту для світлого тексту */
+    text-decoration: none;
+}
+
+.product h2 a:hover {
+    color: #c0c0c0; /* Світліший відтінок для hover ефекту */
+}
+
+.product-link, .product-link:visited, .product-link:active {
+    color: #e0e0e0; /* Світлий колір тексту для невідвіданих і активних посилань */
+    text-decoration: none; /* Видалення підкреслення */
+}
+
+.product-link:hover {
+    color: #c0c0c0; /* Колір при наведенні */
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.9em; /* Трохи менший розмір тексту для метаданих */
+    color: #a0a0a0; /* Світло-сірий колір тексту */
+    margin-bottom: 10px; /* Відступ знизу */
+    margin-top: 10px;
+}
+
+.product-category a, .product-category a:visited, .product-category a:active {
+    color: #e0e0e0; /* Світлий колір тексту для невідвіданих і активних посилань категорій */
+}
+
+.product-category a:hover {
+    color: #c0c0c0; /* Колір при наведенні для посилань категорій */
+}
+
+.product-date {
+    font-size: 0.8em; /* Менший розмір шрифту для дати */
+}
+
+.tags-list {
+  padding: 0;
+  list-style: none;
+}
+
+.tags-list li a {
+  color: #ffffff; /* білий колір тексту */
+  text-decoration: none; /* видалення підкреслення посилань */
+}
+
+.tags-list li a:hover {
+  color: #dddddd; /* світло-сірий колір при наведенні курсору */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-tags a {
+    color: #ffffff; /* Білий колір для тексту */
+    text-decoration: none; /* Відсутність підкреслення */
+    padding-right: 5px; /* Відступ справа для відокремлення тегів */
+}
+
+.product-tags a:hover {
+    color: #dddddd; /* Світло-сірий колір для тексту при наведенні */
+    text-decoration: underline; /* Підкреслення тексту при наведенні */
+}
+
+.product-meta .product-category, .product-meta .product-date {
+    font-size: 0.9em; /* Зменшений розмір шрифту для метаданих */
+    color: #a0a0a0; /* Світло-сірий колір тексту */
+}
+
+.product-meta .product-date {
+    text-align: right; /* Вирівнювання тексту праворуч */
+    display: block; /* Відображення елемента як блок для правильного вирівнювання */
+}
+
+.product-tags a {
+    color: #757575; /* Середній відтінок сірого для тексту */
+    text-decoration: none; /* Видалення підкреслення */
+    margin-right: 5px; /* Відступ зправа для розділення тегів */
+}
+
+.product-tags a:hover {
+    color: #9e9e9e; /* Світліший відтінок сірого при наведенні */
+    text-decoration: underline; /* Підкреслення тексту при наведенні */
+}

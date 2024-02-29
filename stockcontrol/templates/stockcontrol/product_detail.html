@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="product-detail-container">
+    <div class="product-image">
+        <!-- Зображення продукту буде додано тут -->
+    </div>
+    <div class="product-info">
+        <h1>{{ product.title }}</h1>
+        <div class="product-tags">
+          {% for tag in product.tags.all %}
+            <a href="{{ tag.get_absolute_url }}">#{{ tag.tag }}</a>
+          {% endfor %}
+        </div>
+        <div class="product-meta">
+            <span class="product-price">${{ product.price }}</span>
+            <span class="product-status">{{ product.in_stock | yesno:"In Stock,Out of Stock" }}</span>
+            <span class="product-supplier">Supplier: {{ product.supplier }}</span>
+            <div class="product-actions">
+                <!-- Кнопки дій для продукту, наприклад 'Додати до кошика' -->
+            </div>
+        </div>
+        <div class="product-description">
+            <p>{{ product.description }}</p>
+        </div>
+        <div class="additional-info">
+            <!-- Тут може бути додаткова інформація про продукт, наприклад характеристики -->
+        </div>
+    </div>
+</div>
+{% endblock %}

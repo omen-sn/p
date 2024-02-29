@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main">
+  {% for product in products %}
+  <div class="product">
+    <h2><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h2>
+    <div class="product-tags">
+      {% for tag in product.tags.all %}
+        <a href="{{ tag.get_absolute_url }}">#{{ tag.tag }}</a>
+      {% endfor %}
+    </div>
+    <p>{{ product.description|truncatechars:50 }}</p>
+    <p class="product-meta">
+      <span class="product-category">Category: <a href="{{ product.category.get_absolute_url }}">{{ product.category.name }}</a></span>
+      <span class="product-date">Added on: {{ product.date_added|date:"Y-m-d" }}</span>
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
